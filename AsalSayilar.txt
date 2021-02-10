@@ -1,0 +1,38 @@
+package odev;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		for(int i=2;i<1000;i++) {
+			
+			birlerBasamagi(asal(i), i);
+			
+		}
+		
+	}
+	
+	private static boolean asal(int sayi) {
+		for(int i=2;i<sayi;i++) {
+			if(sayi%i==0)
+				return false;
+		}
+		return true;
+	}
+	
+	private static void birlerBasamagi(boolean asal,int sayi) {
+		
+		if(asal) {
+			if(sayi==5)
+				System.out.println(sayi);
+			else if(sayi<100) {
+				if(sayi/10==5)
+					System.out.println(sayi);
+			}
+			else {
+				if(sayi/100==5)
+					System.out.println(sayi);
+			}
+		}
+		
